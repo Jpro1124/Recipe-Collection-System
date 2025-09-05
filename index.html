@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Recinote</title>
+    <link rel="stylesheet" href="index-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="RN logo.png" alt="RN Logo" width="40" height="40">
+                    <h1>Recinote</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search recipes..." id="searchInput">
+                </div>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                    <a href="profile.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </nav>
+                <div class="user-menu" id="userMenu">
+                    <div class="user-avatar">
+                        <img src="jison.jpg" alt="Profile">
+                    </div>
+                    <div class="user-dropdown">
+                        <span class="user-name">Jayson Proponio</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="user-dropdown-menu" id="userDropdownMenu">
+                        <a href="profile.html" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            Profile
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-card">
+                    <h2>Welcome back, Chef!</h2>
+                    <p>Ready to create something delicious today?</p>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        Add New Recipe
+                    </button>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>24</h3>
+                        <p>Total Recipes</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>156</h3>
+                        <p>Favorites</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>8</h3>
+                        <p>This Week</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>4.8</h3>
+                        <p>Avg Rating</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Recipes -->
+            <section class="recipes-section">
+                <div class="section-header">
+                    <h2>Recent Recipes</h2>
+                    <button class="btn btn-secondary">View All</button>
+                </div>
+                <div class="recipes-grid">
+                    <div class="recipe-card" data-recipe-id="1">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&h=200&fit=crop" alt="Mediterranean Salad">
+                            <div class="recipe-overlay">
+                                <button class="btn-icon btn-view" title="View Recipe"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit Recipe"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete Recipe"><i class="fas fa-trash"></i></button>
+                                <button class="btn-icon btn-favorite" title="Add to Favorites"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon btn-share" title="Share Recipe"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>Creamy Garlic Pasta</h3>
+                            <p class="recipe-description">A rich and creamy pasta dish with aromatic garlic and parmesan cheese.</p>
+                            <p class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 25 min</span>
+                                <span><i class="fas fa-users"></i> 4 servings</span>
+                                <span><i class="fas fa-fire"></i> Easy</span>
+                            </p>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-recipe-id="2">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&h=200&fit=crop" alt="Mediterranean Salad">
+                            <div class="recipe-overlay">
+                                <button class="btn-icon btn-view" title="View Recipe"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit Recipe"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete Recipe"><i class="fas fa-trash"></i></button>
+                                <button class="btn-icon btn-favorite" title="Add to Favorites"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon btn-share" title="Share Recipe"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>Mediterranean Salad</h3>
+                            <p class="recipe-description">Fresh vegetables with olives, feta cheese, and a light vinaigrette dressing.</p>
+                            <p class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 15 min</span>
+                                <span><i class="fas fa-users"></i> 2 servings</span>
+                                <span><i class="fas fa-fire"></i> Easy</span>
+                            </p>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-recipe-id="3">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=300&h=200&fit=crop" alt="Fluffy Pancakes">
+                            <div class="recipe-overlay">
+                                <button class="btn-icon btn-view" title="View Recipe"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit Recipe"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete Recipe"><i class="fas fa-trash"></i></button>
+                                <button class="btn-icon btn-favorite" title="Add to Favorites"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon btn-share" title="Share Recipe"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>Fluffy Pancakes</h3>
+                            <p class="recipe-description">Light and airy pancakes perfect for breakfast with maple syrup and butter.</p>
+                            <p class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 20 min</span>
+                                <span><i class="fas fa-users"></i> 3 servings</span>
+                                <span><i class="fas fa-fire"></i> Easy</span>
+                            </p>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-recipe-id="4">
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&h=200&fit=crop" alt="Gourmet Burger">
+                            <div class="recipe-overlay">
+                                <button class="btn-icon btn-view" title="View Recipe"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon btn-edit" title="Edit Recipe"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon btn-delete" title="Delete Recipe"><i class="fas fa-trash"></i></button>
+                                <button class="btn-icon btn-favorite" title="Add to Favorites"><i class="fas fa-heart"></i></button>
+                                <button class="btn-icon btn-share" title="Share Recipe"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                        <div class="recipe-content">
+                            <h3>Gourmet Burger</h3>
+                            <p class="recipe-description">Juicy beef patty with fresh vegetables, cheese, and special sauce on a brioche bun.</p>
+                            <p class="recipe-meta">
+                                <span><i class="fas fa-clock"></i> 35 min</span>
+                                <span><i class="fas fa-users"></i> 2 servings</span>
+                                <span><i class="fas fa-fire"></i> Medium</span>
+                            </p>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories-section">
+                <div class="section-header">
+                    <h2>Browse Categories</h2>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Main Course</h3>
+                        <p>45 recipes</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-cookie-bite"></i>
+                        </div>
+                        <h3>Desserts</h3>
+                        <p>32 recipes</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Healthy</h3>
+                        <p>28 recipes</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3>Beverages</h3>
+                        <p>18 recipes</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <h3>Breakfast</h3>
+                        <p>25 recipes</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Quick & Easy</h3>
+                        <p>38 recipes</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="index-script.js"></script>
+</body>
+</html>

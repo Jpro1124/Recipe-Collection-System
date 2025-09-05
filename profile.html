@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Recinote</title>
+    <link rel="stylesheet" href="profile-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <img src="RN logo.png" alt="RN Logo" width="40" height="40">
+                    <h1>Recinote</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                    <a href="profile.html" class="nav-link active">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </nav>
+                <div class="user-menu" id="userMenu">
+                    <div class="user-avatar">
+                        <img src="jison.jpg" alt="Profile" id="profileAvatar">
+                    </div>
+                    <div class="user-dropdown">
+                        <span class="user-name" id="userName">Jayson Proponio</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="user-dropdown-menu" id="userDropdownMenu">
+                        <a href="index.html" class="dropdown-item">
+                            <i class="fas fa-home"></i>
+                            Dashboard
+                        </a>
+                        <a href="#" class="dropdown-item" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Header -->
+            <section class="profile-header">
+                <div class="profile-banner">
+                    <div class="profile-avatar-large">
+                        <img src="jison.jpg" alt="Profile" id="profileAvatarLarge">
+                        <button class="avatar-edit-btn" id="avatarEditBtn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="profileName">Jayson Proponio</h2>
+                        <p class="profile-title" id="profileTitle">Professional Chef & Recipe Creator</p>
+                        <p class="profile-bio" id="profileBio">Passionate about creating delicious recipes and sharing culinary knowledge with food lovers around the world.</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalRecipes">24</span>
+                                <span class="stat-label">Recipes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalFollowers">1.2K</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalFollowing">156</span>
+                                <span class="stat-label">Following</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn btn-primary" id="editProfileBtn">
+                            <i class="fas fa-edit"></i>
+                            Edit Profile
+                        </button>
+                        <button class="btn btn-secondary" id="settingsBtn">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Content -->
+            <section class="profile-content">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="recipes">
+                        <i class="fas fa-book"></i>
+                        My Recipes
+                    </button>
+                    <button class="tab-btn" data-tab="favorites">
+                        <i class="fas fa-heart"></i>
+                        Favorites
+                    </button>
+                    <button class="tab-btn" data-tab="activity">
+                        <i class="fas fa-chart-line"></i>
+                        Activity
+                    </button>
+                </div>
+
+                <!-- Recipes Tab -->
+                <div class="tab-content active" id="recipes-tab">
+                    <div class="recipes-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&h=200&fit=crop" alt="Mediterranean Salad">
+                                <div class="recipe-overlay">
+                                    <button class="btn-icon btn-view" title="View Recipe"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon btn-edit" title="Edit Recipe"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon btn-delete" title="Delete Recipe"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <div class="recipe-content">
+                                <h3>Mediterranean Salad</h3>
+                                <p class="recipe-description">Fresh vegetables with olives, feta cheese, and a light vinaigrette dressing.</p>
+                                <p class="recipe-meta">
+                                    <span><i class="fas fa-clock"></i> 15 min</span>
+                                    <span><i class="fas fa-users"></i> 2 servings</span>
+                                    <span><i class="fas fa-fire"></i> Easy</span>
+                                </p>
+                                <div class="recipe-rating">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More recipe cards would be here -->
+                    </div>
+                </div>
+
+                <!-- Favorites Tab -->
+                <div class="tab-content" id="favorites-tab">
+                    <div class="favorites-grid">
+                        <div class="favorite-item">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop" alt="Pasta">
+                            <div class="favorite-info">
+                                <h4>Creamy Garlic Pasta</h4>
+                                <p>by Chef Master</p>
+                                <span class="favorite-date">Added 2 days ago</span>
+                            </div>
+                            <button class="btn-icon btn-remove-favorite">
+                                <i class="fas fa-heart-broken"></i>
+                            </button>
+                        </div>
+                        <!-- More favorite items would be here -->
+                    </div>
+                </div>
+
+                <!-- Activity Tab -->
+                <div class="tab-content" id="activity-tab">
+                    <div class="activity-timeline">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Created new recipe</h4>
+                                <p>Added "Mediterranean Salad" to your collection</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Favorited recipe</h4>
+                                <p>Added "Creamy Garlic Pasta" to favorites</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>Updated recipe</h4>
+                                <p>Modified "Fluffy Pancakes" recipe</p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay" id="editProfileModal" style="display: none;">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <button class="modal-close" id="closeEditModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm">
+                    <div class="form-group">
+                        <label for="editName">Full Name</label>
+                        <input type="text" id="editName" value="Chef Master" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editTitle">Professional Title</label>
+                        <input type="text" id="editTitle" value="Professional Chef & Recipe Creator">
+                    </div>
+                    <div class="form-group">
+                        <label for="editBio">Bio</label>
+                        <textarea id="editBio" rows="4">Passionate about creating delicious recipes and sharing culinary knowledge with food lovers around the world.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" value="chef@recinote.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editLocation">Location</label>
+                        <input type="text" id="editLocation" value="New York, NY">
+                    </div>
+                    <div class="form-group">
+                        <label for="editWebsite">Website</label>
+                        <input type="url" id="editWebsite" value="https://chefmaster.com">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Settings Modal -->
+    <div class="modal-overlay" id="settingsModal" style="display: none;">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Account Settings</h2>
+                <button class="modal-close" id="closeSettingsModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-sections">
+                    <div class="settings-section">
+                        <h3>Privacy Settings</h3>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <span>Make profile public</span>
+                                <input type="checkbox" id="publicProfile" checked>
+                                <span class="toggle-switch"></span>
+                            </label>
+                            <p class="setting-description">Allow others to view your profile and recipes</p>
+                        </div>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <span>Show email address</span>
+                                <input type="checkbox" id="showEmail">
+                                <span class="toggle-switch"></span>
+                            </label>
+                            <p class="setting-description">Display your email on your public profile</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Notification Settings</h3>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <span>Email notifications</span>
+                                <input type="checkbox" id="emailNotifications" checked>
+                                <span class="toggle-switch"></span>
+                            </label>
+                            <p class="setting-description">Receive notifications via email</p>
+                        </div>
+                        <div class="setting-item">
+                            <label class="setting-label">
+                                <span>Recipe updates</span>
+                                <input type="checkbox" id="recipeUpdates" checked>
+                                <span class="toggle-switch"></span>
+                            </label>
+                            <p class="setting-description">Get notified when your recipes are liked or commented on</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Security</h3>
+                        <div class="setting-item">
+                            <button class="btn btn-secondary" id="changePasswordBtn">
+                                <i class="fas fa-key"></i>
+                                Change Password
+                            </button>
+                        </div>
+                        <div class="setting-item">
+                            <button class="btn btn-secondary" id="twoFactorBtn">
+                                <i class="fas fa-shield-alt"></i>
+                                Two-Factor Authentication
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3>Danger Zone</h3>
+                        <div class="setting-item">
+                            <button class="btn btn-danger" id="deleteAccountBtn">
+                                <i class="fas fa-trash"></i>
+                                Delete Account
+                            </button>
+                            <p class="setting-description">Permanently delete your account and all data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div class="modal-overlay" id="deleteAccountModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Delete Account</h2>
+                <button class="modal-close" id="closeDeleteModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="delete-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Are you absolutely sure?</h3>
+                    <p>This action cannot be undone. This will permanently delete your account and remove all your recipes, favorites, and data from our servers.</p>
+                </div>
+                <div class="form-group">
+                    <label for="confirmDelete">Type "DELETE" to confirm</label>
+                    <input type="text" id="confirmDelete" placeholder="DELETE">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelDelete">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn" disabled>Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile-script.js"></script>
+</body>
+</html>
